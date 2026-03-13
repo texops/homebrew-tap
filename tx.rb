@@ -5,21 +5,21 @@
 class Tx < Formula
   desc "CLI for TexOps"
   homepage "https://github.com/texops/tx"
-  version "0.1.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/texops/tx/releases/download/v0.1.0/tx_0.1.0_darwin_amd64.tar.gz"
-      sha256 "176362c400388910ee53a5f2470646e4263e13466bb6b05ec296d9ab6440dab3"
+      url "https://github.com/texops/tx/releases/download/v0.3.0/tx_0.3.0_darwin_amd64.tar.gz"
+      sha256 "d24f746ff8d21603e71b65809da7f9c96f8ba796eafab45bb205cc4092c0f2c3"
 
       define_method(:install) do
         bin.install "tx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/texops/tx/releases/download/v0.1.0/tx_0.1.0_darwin_arm64.tar.gz"
-      sha256 "9012be960f962337c93db82f4e7275cc1cf3ec5a5450f8ecac7b87fd195ebf21"
+      url "https://github.com/texops/tx/releases/download/v0.3.0/tx_0.3.0_darwin_arm64.tar.gz"
+      sha256 "52ddac430b32757c5b378c648f71387ac273c79033d49793e62ff314c028459c"
 
       define_method(:install) do
         bin.install "tx"
@@ -29,15 +29,15 @@ class Tx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/texops/tx/releases/download/v0.1.0/tx_0.1.0_linux_amd64.tar.gz"
-      sha256 "b725938414047a801079901b410834c4cfa37ec1b1f91e1e2e4d4cdf15664178"
+      url "https://github.com/texops/tx/releases/download/v0.3.0/tx_0.3.0_linux_amd64.tar.gz"
+      sha256 "1dc19be4d370c27a2cd3385af60e34351bbd07c105f2f35e2987206d8b992885"
       define_method(:install) do
         bin.install "tx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/texops/tx/releases/download/v0.1.0/tx_0.1.0_linux_arm64.tar.gz"
-      sha256 "0e2ce5922a741676a9fb70a1dc9ed2a3fcae9537041c658e4c63d96f617ae5df"
+      url "https://github.com/texops/tx/releases/download/v0.3.0/tx_0.3.0_linux_arm64.tar.gz"
+      sha256 "7d1901d3e69156f2af7a2afc78d10334b67cc841687f7c5475c8d76920fa0f12"
       define_method(:install) do
         bin.install "tx"
       end
