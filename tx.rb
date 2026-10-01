@@ -5,13 +5,13 @@
 class Tx < Formula
   desc "CLI for TexOps"
   homepage "https://github.com/texops/tx"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/texops/tx/releases/download/v0.5.0/tx_0.5.0_darwin_amd64.tar.gz"
-      sha256 "f9b74f988c2891328915fcff28db0f7cf342da53e1d78fd96bdcb40f6c803163"
+      url "https://github.com/texops/tx/releases/download/v0.6.0/tx_0.6.0_darwin_amd64.tar.gz"
+      sha256 "60e06f38dfedcd08827bd470dd23d0006dec0fc357032c83a547cc4002017d30"
 
       define_method(:install) do
         bin.install "tx"
@@ -19,8 +19,8 @@ class Tx < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/texops/tx/releases/download/v0.5.0/tx_0.5.0_darwin_arm64.tar.gz"
-      sha256 "f6efdec8734e7a94b9ceb16741bed67073e0afeaa50cf943709c4cdaa839f1b4"
+      url "https://github.com/texops/tx/releases/download/v0.6.0/tx_0.6.0_darwin_arm64.tar.gz"
+      sha256 "6f66292b51b50dfca46d9dddc48c93a70e11ffc7de005e85f3ce3015e8010b62"
 
       define_method(:install) do
         bin.install "tx"
@@ -31,16 +31,16 @@ class Tx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/texops/tx/releases/download/v0.5.0/tx_0.5.0_linux_amd64.tar.gz"
-      sha256 "0c77d92f9cac8128241a5378c091879c9b4645c67487e78f134385e316cf9b0e"
+      url "https://github.com/texops/tx/releases/download/v0.6.0/tx_0.6.0_linux_amd64.tar.gz"
+      sha256 "9e9069bedc5da1f5ea4902421028a6f532796e8cd1737e0e8a753b939759b754"
       define_method(:install) do
         bin.install "tx"
         man1.install "man/tx.1"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/texops/tx/releases/download/v0.5.0/tx_0.5.0_linux_arm64.tar.gz"
-      sha256 "517dd5dcda55abf576a026434402b33b0ca68ee3cb5d11be80efd12e37502375"
+      url "https://github.com/texops/tx/releases/download/v0.6.0/tx_0.6.0_linux_arm64.tar.gz"
+      sha256 "983885bee8aae591b730b49b0c2efae8949845886acfcf8f689e228c435397a0"
       define_method(:install) do
         bin.install "tx"
         man1.install "man/tx.1"
